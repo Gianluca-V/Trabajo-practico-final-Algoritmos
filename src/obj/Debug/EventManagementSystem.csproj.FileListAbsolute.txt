@@ -1,0 +1,7 @@
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\obj\Debug\EventManagementSystem.csproj.AssemblyReference.cache
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\obj\Debug\EventManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\bin\Debug\EventManagementSystem.exe.config
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\bin\Debug\EventManagementSystem.exe
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\bin\Debug\EventManagementSystem.pdb
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\obj\Debug\EventManagementSystem.exe
+C:\Users\gianl\Documents\facultad gianluca vespe\segundoCuatrimestre\Algoritmos\trabajo practico final\src\obj\Debug\EventManagementSystem.pdb

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{8F92CB83-3D98-4527-B480-D4B6634BB2E3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EventManagementSystem</RootNamespace>
+    <AssemblyName>EventManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ClientServices\ClientService.cs" />
+    <Compile Include="Application\EmployeeServices\EmployeeService.cs" />
+    <Compile Include="Application\EventServices\EventService.cs" />
+    <Compile Include="Application\Middleware\Middleware.cs" />
+    <Compile Include="Contracts\ClientRequest.cs" />
+    <Compile Include="Contracts\EmployeeRequest.cs" />
+    <Compile Include="Contracts\EventRequest.cs" />
+    <Compile Include="Contracts\ServiceRequest.cs" />
+    <Compile Include="Domain\ClientEntity\Client.cs" />
+    <Compile Include="Domain\ClientEntity\Exceptions\EmployeeDoesNotExistException.cs" />
+    <Compile Include="Domain\EmployeeEntity\Exceptions\EmployeeAlreadyExistException.cs" />
+    <Compile Include="Domain\EmployeeEntity\Exceptions\EmployeeDoesNotExisteException.cs" />
+    <Compile Include="Domain\EmployeeEntity\Exceptions\ManagerIsAssignedToEventException.cs" />
+    <Compile Include="Domain\EventAggregate\Event.cs" />
+    <Compile Include="Domain\EventAggregate\Exceptions\EventDoesNotExistException.cs" />
+    <Compile Include="Domain\EventAggregate\Exceptions\InvalidEventDateTimeException.cs" />
+    <Compile Include="Domain\EventAggregate\Exceptions\InvalidEventTimeSpanException.cs" />
+    <Compile Include="Domain\EventAggregate\ValueObjects\EventTimeSpan.cs" />
+    <Compile Include="Domain\EventAggregate\ValueObjects\EventType.cs" />
+    <Compile Include="Domain\HallEntity\Hall.cs" />
+    <Compile Include="Domain\ManagerEntity\Manager.cs" />
+    <Compile Include="Domain\Repositories\IClientRepository.cs" />
+    <Compile Include="Domain\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Domain\Repositories\IEventRepository.cs" />
+    <Compile Include="Domain\EventAggregate\ValueObjects\EventDateTime.cs" />
+    <Compile Include="Domain\ServiceEntity\Exceptions\InvalidServiceQuantityException.cs" />
+    <Compile Include="Domain\Shared\Exceptions\CurrencyMismatchException.cs" />
+    <Compile Include="Domain\Shared\Exceptions\InvalidDNIException.cs" />
+    <Compile Include="Domain\Shared\Exceptions\InvalidNameException.cs" />
+    <Compile Include="Domain\Shared\ValueObjects\Name.cs" />
+    <Compile Include="Domain\Shared\ValueObjects\DNI.cs" />
+    <Compile Include="Domain\EmployeeEntity\Employee.cs" />
+    <Compile Include="Domain\ServiceEntity\Service.cs" />
+    <Compile Include="Domain\ServiceEntity\ValueObjects\ServiceType.cs" />
+    <Compile Include="Domain\Shared\BaseClasses\BaseEntity.cs" />
+    <Compile Include="Domain\Shared\ValueObjects\Money.cs" />
+    <Compile Include="Infrastructure\Repositories\ClientRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\EmployeeRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\EventRepository.cs" />
+    <Compile Include="Presentation\ConsoleApp\ClientControllers\ClientController.cs" />
+    <Compile Include="Presentation\ConsoleApp\ConsoleMenu.cs" />
+    <Compile Include="Presentation\ConsoleApp\EmployeeControllers\EmployeeController.cs" />
+    <Compile Include="Presentation\ConsoleApp\EventControllers\EventController.cs" />
+    <Compile Include="Presentation\ConsoleApp\HelperFunctions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\ClientEntity\ValueObjects\" />
+    <Folder Include="Domain\EmployeeEntity\ValueObjects\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
